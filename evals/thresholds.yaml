@@ -1,0 +1,19 @@
+# Evaluation Thresholds
+regression:
+  min_pass_rate: 0.95
+  citation_accuracy: 0.90
+  risk_determinism: 1.0
+
+red_team:
+  max_critical_findings: 0
+  max_high_findings: 2
+
+drift_detection:
+  risk_score_shift_threshold: 0.05
+  citation_accuracy_drop_threshold: 0.03
+  compliance_pass_rate_drop_threshold: 0.01
+
+gates:
+  block_merge_on_regression_failure: true
+  block_merge_on_redteam_critical: true
+  alert_on_drift: true

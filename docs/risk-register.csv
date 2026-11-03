@@ -1,0 +1,7 @@
+id,risk,likelihood,impact,mitigation,owner,status
+R-01,PII leakage in logs,Medium,High,"Redaction pipeline + schema validation",Jane,Active
+R-02,Hallucinated citation in thesis,Low,Critical,"Citation verification tool + eval gate",Jane,Monitored
+R-03,Market data API failure,Medium,Medium,"Multi-provider fallback + cached stale data",Jane,Active
+R-04,Compliance rule drift,Low,High,"Version-controlled rules + review cycle",Jane,Planned
+R-05,LLM cost overrun,Medium,Medium,"Caching + routing to Sonnet for subtasks",Jane,Active
+R-06,Vector index corruption,Low,High,"Automated integrity checks + rebuild pipeline",Jane,Planned

@@ -1,0 +1,41 @@
+%%{init: {'theme': 'base', 'themeVariables': {
+  'primaryColor': '#0B2D4A',
+  'primaryTextColor': '#fff',
+  'primaryBorderColor': '#00C9A7',
+  'lineColor': '#888',
+  'secondaryColor': '#1A1A2E',
+  'tertiaryColor': '#E85D4D',
+  'background': 'transparent',
+  'mainBkg': 'transparent',
+  'secondBkg': 'transparent',
+  'tertiaryBkg': 'transparent'
+}}}%%
+flowchart LR
+    subgraph Ingestion[Ingestion Layer]
+        A[Market Data APIs] --> B[Normalizer]
+        C[News/Webhooks] --> B
+        D[Internal Research] --> B
+    end
+    subgraph Core[Core Orchestration]
+        B --> E{Router Agent}
+        E --> F[Research Planner]
+        E --> G[Risk Assessor]
+        E --> H[Compliance Checker]
+        F --> I[Tool Registry]
+        G --> I
+        H --> I
+    end
+    subgraph Governance[Governance Layer]
+        I --> J[Audit Logger]
+        J --> K[Eval Harness]
+        K --> L[Risk Register]
+    end
+    subgraph Output[Output Layer]
+        I --> M[Trade Thesis / Report]
+        J --> N[Compliance Dashboard]
+        L --> O[Auditor View]
+    end
+    style Ingestion fill:#0B2D4A,color:#fff
+    style Core fill:#1A1A2E,color:#fff
+    style Governance fill:#E85D4D,color:#fff
+    style Output fill:#00C9A7,color:#0B2D4A

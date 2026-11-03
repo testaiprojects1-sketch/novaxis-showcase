@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Novaxis Audit Log Entry",
+  "type": "object",
+  "required": ["trace_id", "timestamp", "event_type", "payload"],
+  "properties": {
+    "trace_id": { "type": "string", "format": "uuid" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "event_type": { "enum": ["routing_decision", "tool_call", "research_complete", "risk_assessment", "compliance_check", "llm_call", "agent_decision"] },
+    "payload": { "type": "object" }
+  }
+}
