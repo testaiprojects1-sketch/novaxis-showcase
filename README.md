@@ -2,9 +2,9 @@
 **Multi-agent orchestration layer for regulated trading workflows — governance, audit, and compliance built in.**  
 *Public architecture showcase — implementation is private.*
 
-[![Status](https://img.shields.io/badge/Status-Production%20Ready-00C9A7)]()
-[![Governance](https://img.shields.io/badge/Governance-By%20Design-0B2D4A)]()
-[![License](https://img.shields.io/badge/License-Private-E85D4D)]()
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-EC4899?style=for-the-badge)]()
+[![Governance](https://img.shields.io/badge/Governance-By%20Design-EC4899?style=for-the-badge)]()
+[![License](https://img.shields.io/badge/License-Private-EC4899?style=for-the-badge)]()
 
 ---
 
